@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProjectDetailsActivity">
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Details"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="339dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Project ID"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetails" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="346dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Project Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextId" />
+
+    <Spinner
+        android:id="@+id/spinnerDuration"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="9dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupType"
+        android:layout_width="215dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDuration">
+
+        <RadioButton
+            android:id="@+id/radioButtonType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Private" />
+
+        <RadioButton
+            android:id="@+id/radioButtonType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Public" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxSponsor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="Sponsor01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSponsor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Sponsor02"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSponsor1"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSponsor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Sponsor03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSponsor2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
+
+
+    <EditText
+        android:id="@+id/editTextSelectDate"
+        android:layout_width="185dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:focusable="false"
+        android:hint="Start Date"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSponsor2" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="172dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Start Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/editTextSelectDate"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSponsor2" />
+
+    <EditText
+        android:id="@+id/editTextCost"
+        android:layout_width="248dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="Project Cost"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSponsor2" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCost" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
